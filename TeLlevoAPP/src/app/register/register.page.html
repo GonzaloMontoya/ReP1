@@ -10,4 +10,23 @@
       <ion-title size="large">register</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <ion-content class="ion-padding">
+    <form [formGroup]="formulariocrearempleado">
+     <ion-input formControlName="nombre" label="Ingrese Nombre" label-placement="floating" fill="outline" placeholder="Nombre"></ion-input> <br>
+  <ion-input formControlName="edad" label="Ingrese edad" label-placement="floating" fill="outline" placeholder="Edad"></ion-input><br>
+  <ion-input formControlName="cargo" label="Ingrese Cargo" label-placement="floating" fill="outline" placeholder="Cargo"></ion-input> <br>
+  <ion-button (click)="grabarEmpleado()">Grabar</ion-button>
+   </form>
+  
+  </ion-content>
+  
+
 </ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
