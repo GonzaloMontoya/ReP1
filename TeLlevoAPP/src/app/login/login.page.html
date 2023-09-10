@@ -12,28 +12,28 @@
   </ion-header>
 
   <div class="ion-padding" style="margin-top: 2cm;">
-    <ion-input label="Ingrese su nombre" label-placement="floating" 
-    fill="outline" placeholder="Usuario">     </ion-input><br>
-    
-    <ion-input label="Ingrese su contraseña" label-placement="floating"
-     fill="outline" placeholder="Contraseña" type="password" value="">    </ion-input><br>
-    <a target="_blank" routerLink="/recuperar" style="margin-bottom: 5mm;" class="ion-padding">Recuperar contraseña</a>
+    <form [formGroup]="ingersoUsuariofrm">
+      
+ 
+      <ion-input formControlName = "nusuario" label="Ingrese usuario" label-placement="floating"
+      fill="outline" placeholder="Usuario" color="success">    </ion-input><br>
+
+      <ion-input 
+        formControlName = "password" label="Ingrese contraseña" label-placement="floating"
+        fill="outline" placeholder="Contraseña" type="password" color="success">    
+      </ion-input><br>
 
 
-    <ion-button expand="block" routerLink="/home" style="margin-top: 5mm;" class="">Ingresar</ion-button> 
-    <ion-button expand="block" routerLink="/home" style="margin-top: 5mm;" class="">Volver</ion-button> 
+
+      <ion-button expand="block" routerLink="/inicio"
+       style="margin-top: 5mm;" (click)="IngresarUsuario()">Ingresar</ion-button> 
+
+      <ion-button expand="block" routerLink="/home" 
+       style="margin-top: 5mm;" class="">Volver</ion-button> 
+
+    </form>
   </div>
 
 
-  <!-- <form [formGroup]="formularioLogin">
-    <ion-item>
-      <ion-label position="floating">Nombre</ion-label>
-      <ion-input formControlName="nombre"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input formControlName="password" type="password"></ion-input>
-    </ion-item>
-  </form> -->
 
 </ion-content>

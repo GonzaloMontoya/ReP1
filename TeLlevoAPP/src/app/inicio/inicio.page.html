@@ -11,9 +11,12 @@
     </ion-toolbar>
   </ion-header>
 
-
-  <ion-label>¡Bienvenido, !</ion-label>
-
+  <div *ngFor="let usuario of usuarios ">
+    <ion-label class="ion-padding" style="text-align: center; margin-top: 10cm;">
+      ¡Bienvenido, {{usuario.nusuario}} !
+    </ion-label>
+  </div>
+  
 
 </ion-content>
 

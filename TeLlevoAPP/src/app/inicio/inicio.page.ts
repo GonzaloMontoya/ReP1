@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuarios } from '../interfaces/usuario.interface';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
   
-  constructor() { }
-
+    
+  usuarios: Usuarios[] = [
+      {
+        nusuario:" ",
+        password:" "
+      }
+    ]
+  
+  
+  
   ngOnInit() {
   }
 
+
+  
 }

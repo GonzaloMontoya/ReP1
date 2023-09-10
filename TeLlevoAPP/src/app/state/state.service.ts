@@ -1,9 +1,22 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StateService {
 
-  constructor() { }
+  nusuario:BehaviorSubject<string> = new BehaviorSubject('Usuario');
+
+  get getUsuario(){
+    return this.nusuario.asObservable();
+  }
+
+  set setUsuario(usuario:string){
+      this.nusuario.next(usuario);
+  }
+
+
+  constructor() { 
+  }
 }
