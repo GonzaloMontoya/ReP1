@@ -9,28 +9,38 @@ import { StateService } from '../state/state.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
- 
-  ingersoUsuariofrm: FormGroup; 
 
-  constructor(public fb: FormBuilder, private router:Router, private stateService:StateService) {
-    
+  ingersoUsuariofrm: FormGroup;
+
+  constructor(public fb: FormBuilder, private router: Router, private stateService: StateService) {
+
     this.ingersoUsuariofrm = this.fb.group({
-     nusuario:[""],
-     password:[""]
+      nusuario: [""],
+      password: [""]
 
     })
   }
 
   ngOnInit() {
   }
-  IngresarUsuario(){
+  IngresarUsuario() {
     console.log("Prueba")
-    const usuario={
-      nusuario:this.ingersoUsuariofrm.get("nusuario")?.value,
-      password:this.ingersoUsuariofrm.get("password")?.value,
+    const usuario = {
+      nusuario: this.ingersoUsuariofrm.get("nusuario")?.value,
+      password: this.ingersoUsuariofrm.get("password")?.value,
     }
+
+    if (usuario.nusuario == "" || usuario.password == "") {
+      alert("Ingrese Los Datos")
+      return;
+    }
+    this.stateService.setUsuario = usuario.nusuario;
+    this.router.navigate(['/inicio']);
     console.log(usuario)
     return
   }
 
+
 }
+
+

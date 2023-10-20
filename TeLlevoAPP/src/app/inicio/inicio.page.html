@@ -11,9 +11,9 @@
     </ion-toolbar>
   </ion-header>
 
-  <div *ngFor="let usuario of usuarios ">
+  <div>
     <ion-label class="ion-padding" style="text-align: center; margin-top: 10cm;">
-      ¡Bienvenido, {{usuario.nusuario}} !
+      ¡Bienvenido, {{(nombreUsuario$ | async)}} !
     </ion-label>
   </div>
   

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuarios } from '../interfaces/usuario.interface';
+import { Observable } from 'rxjs';
+import { StateService } from '../state/state.service';
 
 @Component({
   selector: 'app-inicio',
@@ -7,19 +9,18 @@ import { Usuarios } from '../interfaces/usuario.interface';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-  
-    
-  usuarios: Usuarios[] = [
-      {
-        nusuario:" ",
-        password:" "
-      }
-    ]
-  
-  
-  
-  ngOnInit() {
-  }
+
+  nombreUsuario$!: Observable<String>;  
+
+  constructor(
+    private stateService: StateService
+) {
+  this.nombreUsuario$=this.stateService.getUsuario;
+}
+
+
+ngOnInit() {
+}
 
 
   
