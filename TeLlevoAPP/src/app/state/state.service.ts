@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class StateService {
 
-  nusuario:BehaviorSubject<string> = new BehaviorSubject('Usuario');
+  nusuario:BehaviorSubject<string> = new BehaviorSubject('');
 
   get getUsuario(){
     return this.nusuario.asObservable();

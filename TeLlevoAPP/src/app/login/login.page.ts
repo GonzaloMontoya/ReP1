@@ -28,16 +28,20 @@ export class LoginPage implements OnInit {
     const usuario = {
       nusuario: this.ingersoUsuariofrm.get("nusuario")?.value,
       password: this.ingersoUsuariofrm.get("password")?.value,
+
     }
 
     if (usuario.nusuario == "" || usuario.password == "") {
       alert("Ingrese Los Datos")
       return;
     }
-    this.stateService.setUsuario = usuario.nusuario;
-    this.router.navigate(['/inicio']);
-    console.log(usuario)
-    return
+    else {
+      this.stateService.setUsuario = usuario.nusuario;
+      this.router.navigate(['/inicio']);
+      console.log(usuario)
+      return
+    }
+
   }
 
 
