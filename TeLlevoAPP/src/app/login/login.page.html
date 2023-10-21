@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>login</ion-title>
+  <ion-toolbar color="medium">
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,26 +11,29 @@
     </ion-toolbar>
   </ion-header>
 
-  <div class="ion-padding" style="margin-top: 2cm;">
+
+  <h1 class="ion-padding" style="text-align: center; margin-top: 1cm; font-weight: 500;">Inicio de sesión</h1>
+  <hr>
+
+  <div class="ion-padding">
     <form [formGroup]="ingersoUsuariofrm">
       
  
-      <ion-input formControlName = "nusuario" label="Ingrese usuario" label-placement="floating"
-      fill="outline" placeholder="Usuario" color="success">    </ion-input><br>
+      <ion-input color="medium" formControlName = "nusuario" label="Ingrese usuario" label-placement="floating"
+      fill="outline" placeholder="Usuario" color="medium">    </ion-input><br>
 
-      <ion-input 
-        formControlName = "password" label="Ingrese contraseña" label-placement="floating"
-        fill="outline" placeholder="Contraseña" type="password" color="success">    
+      <ion-input color="medium" formControlName = "password" label="Ingrese contraseña" label-placement="floating"
+      fill="outline" placeholder="Contraseña" type="password" >    
       </ion-input><br>
       <a routerLink="/recuperar">Recuperar contraseña</a>
 
 
 
       <ion-button expand="block"
-       style="margin-top: 5mm;" (click)="IngresarUsuario()">Ingresar</ion-button> 
+       style="margin-top: 5mm;" (click)="IngresarUsuario()" color="medium">Ingresar</ion-button> 
 
       <ion-button expand="block" routerLink="/home" 
-       style="margin-top: 5mm;" class="">Volver</ion-button> 
+       style="margin-top: 5mm;" class="" color="medium">Volver</ion-button> 
 
     </form>
   </div>
@@ -38,3 +41,9 @@
 
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="medium">
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="medium">
     <ion-title>
       TeLlevoApp
     </ion-title>
@@ -13,15 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <label for=""></label>
-  <ion-button class="ion-padding" expand="block" routerLink="/login">Login</ion-button> 
-  <ion-button class="ion-padding" expand="block" routerLink="/register">Register</ion-button>
-  
+  <div class="ion-padding" style="text-align: center; margin-top: 2cm;">
+    <h1 style="font-weight: 500;">¡Bienvenido a TeLlevoApp!</h1>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+  
+  <ion-button fill="outline" color="medium" class="ion-padding" expand="block" routerLink="/login">Login</ion-button> 
+  <ion-button fill="outline" color="medium" class="ion-padding" expand="block" routerLink="/register">Register</ion-button>
+  
 
 
 </ion-content>
+<ion-footer>
+  <ion-toolbar color="medium">
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
