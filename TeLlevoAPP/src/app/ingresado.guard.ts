@@ -10,18 +10,15 @@ export class IngresadoGuard implements CanActivate {
   constructor(public stateservice: StateService, private router: Router) { }
 
   canActivate(): boolean {
-    
-    const nusuario = {
-      IngresadoGuard: this.stateservice.getUsuario
-    };
-    if (!nusuario.IngresadoGuard) {
-      this.router.navigate(['login/']);
-      return false;
-    }
-
-    return true;
-
-
+    let isLogged = false;
+    this.stateservice.getUsuario.subscribe((usuario) => {
+      if (usuario != '') {
+        isLogged = true;
+      }else{
+        this.router.navigate(['/login']);
+      }
+    })
+    return isLogged;
   }
 
 }
