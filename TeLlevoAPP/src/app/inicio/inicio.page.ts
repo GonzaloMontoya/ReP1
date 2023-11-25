@@ -4,7 +4,7 @@ import { ApiService } from '../services/api.service';
 import { Observable } from 'rxjs';
 import { DummyService } from '../state/dummy.service';
 import { StateService } from '../state/state.service';
-// import { Router } from '@angular/router';
+import { Router } from '@angular/router';
 // import { Usuarios } from '../interfaces/usuario.interface';
 
 
@@ -23,7 +23,7 @@ export class InicioPage implements OnInit {
     private ApiService: ApiService,
     private DummyService: DummyService,
     private stateService: StateService,
-    // private router: Router
+    private router: Router
 ) {
   this.nombreUsuario$=this.stateService.getUsuario;
 }
@@ -37,10 +37,10 @@ ngOnInit() {
 };
 
 
-Detalles(dummy:any){
+IrADetalles(dummy:any){
   debugger;
   this.DummyService.setDummy(dummy);
-  // // this.router.navigateByUrl("/Detalles")
+  this.router.navigateByUrl("/detalles")
 }
 
   

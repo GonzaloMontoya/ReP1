@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="medium">
+    <ion-title>Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Conductor</ion-card-title>
+    
+  </ion-card-header>
+  
+  <ion-card-content>
+    <!-- <div *ngFor="let dummy of dummys?.users"> -->
+      <p>
+        Nombre: {{detalles.firstName}} {{detalles.lastName}} <br>
+        Edad: {{detalles.age}}  <br> Patente: {{detalles.username}}
+      </p>
+      <!-- </div>   -->
+      <ion-button expand="block" routerLink="/inicio" 
+    style="margin-top: 5mm;" class="" color="medium">Volver</ion-button> 
+    </ion-card-content>
+  </ion-card>
+  
+
+<ion-footer>
+  <ion-toolbar color="medium">
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
