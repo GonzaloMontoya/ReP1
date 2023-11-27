@@ -1,4 +1,4 @@
-export interface Root {
+export interface Intdummys {
     users: User[]
     total: number
     skip: number

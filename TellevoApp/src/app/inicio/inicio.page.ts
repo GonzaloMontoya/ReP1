@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { DummyService } from '../state/dummy.service';
 import { StateService } from '../state/state.service';
 import { Router } from '@angular/router';
+import { Intdummys } from '../interfaces/Intdummy.interface';
 // import { Usuarios } from '../interfaces/usuario.interface';
 
 

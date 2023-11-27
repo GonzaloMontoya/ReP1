@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
+import { Intdummys } from '../interfaces/Intdummy.interface';
+import { ApiService } from '../services/api.service';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class DummyService {
   private dummy:BehaviorSubject<any>= new BehaviorSubject(null);
 
 
-  setDummys(datosDummys:any){
+  setDummys(datosDummys:Intdummys){
     this.dummys.next(datosDummys);
   };
 

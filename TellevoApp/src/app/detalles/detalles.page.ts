@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DummyService } from '../state/dummy.service'; 
+import { Intdummys } from '../interfaces/Intdummy.interface';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-detalles',
