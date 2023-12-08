@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="medium">
+  <ion-toolbar style="background-color: #012E55; color: #FFFFFF;" color="#012E55">
     <ion-title>Register</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -10,14 +10,32 @@
       <ion-title size="large">Register</ion-title>
     </ion-toolbar>
   </ion-header>
-  <h1 class="ion-padding" style="text-align: center; margin-top: 1cm; font-weight: 500;">Registro de usuario</h1>
-  <ion-button expand="block" routerLink="/home" color ="medium" >Volver</ion-button> 
+
+
+  <div class="ion-padding">
+
+    <h1 class="ion-padding" style="text-align: center; margin-top: 1cm; margin-bottom: 1cm; font-weight: 500;">Registro de usuario</h1>
+    
+    <ion-input label="Ingrese usuario" label-placement="floating"
+    fill="outline" placeholder="Usuario" style="color: #012E55;" color="#FBBD1E"></ion-input><br>
+    
+    <ion-input  label="Ingrese contraseña" label-placement="floating"
+    fill="outline" placeholder="Contraseña" style="color: #012E55;" type="password" color="#FBBD1E"></ion-input><br>
+    
+    <ion-input label="Confirme contraseña" label-placement="floating"
+    fill="outline" placeholder="Contraseña" style="color: #012E55; outline-color: #012E55;" type="password" color="#FBBD1E"></ion-input><br>
+    
+    <ion-button expand="block" routerLink="/home" color ="#FBBD1E" style="margin-top: 5mm; color: #FFFFFF; background-color: #FBBD1E;">Registrar</ion-button> 
+    <ion-button expand="block" routerLink="/home" color ="#FBBD1E" style="margin-bottom: 1cm; margin-top: 5mm; color: #FFFFFF; background-color: #FBBD1E;">Volver</ion-button> 
+  </div>
 
 </ion-content>
 
 
-<ion-footer>
-  <ion-toolbar color="medium">
-    <ion-title>Footer</ion-title>
+<ion-footer style="background-color: #012E55;">
+  <ion-toolbar color="#012E55" style="text-align: center; background-color: #012E55; color: #FFFFFF;">
+    <p>TellevoApp</p>
+    <p>  © 2023 Duoc UC. Todos los derechos reservados.</p>
+    
   </ion-toolbar>
 </ion-footer>

@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="medium">
+  <ion-toolbar style="background-color: #012E55; color: #FFFFFF;" color="#012E55">
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -18,22 +18,21 @@
   <div class="ion-padding">
     <form [formGroup]="ingersoUsuariofrm">
       
- 
-      <ion-input color="medium" formControlName = "nusuario" label="Ingrese usuario" label-placement="floating"
-      fill="outline" placeholder="Usuario" color="medium">    </ion-input><br>
+      <ion-input color="#012E55" formControlName = "nusuario" label="Ingrese usuario" label-placement="floating"
+      fill="outline" style="color: #012E55;" placeholder="Usuario" color="#012E55"></ion-input><br>
 
-      <ion-input color="medium" formControlName = "password" label="Ingrese contraseña" label-placement="floating"
-      fill="outline" placeholder="Contraseña" type="password" >    
+      <ion-input color="#012E55" formControlName = "password" label="Ingrese contraseña" label-placement="floating"
+      fill="outline"  style="color: #012E55;" placeholder="Contraseña" type="password" >    
       </ion-input><br>
       <a routerLink="/recuperar">Recuperar contraseña</a>
 
 
 
       <ion-button expand="block"
-       style="margin-top: 5mm;" (click)="IngresarUsuario()" color="medium">Ingresar</ion-button> 
+       style="margin-top: 5mm;" (click)="IngresarUsuario()" style="background-color: #FBBD1E;" color="#FBBD1E">Ingresar</ion-button> 
 
       <ion-button expand="block" routerLink="/home" 
-       style="margin-top: 5mm;" class="" color="medium">Volver</ion-button> 
+       style="margin-top: 5mm;" style="background-color: #FBBD1E;" class="" color="#FBBD1E">Volver</ion-button> 
 
     </form>
   </div>
@@ -42,8 +41,10 @@
 
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="medium">
-    <ion-title>Footer</ion-title>
+<ion-footer style="background-color: #012E55;">
+  <ion-toolbar color="#012E55" style="text-align: center; background-color: #012E55; color: #FFFFFF;">
+    <p>TellevoApp</p>
+    <p>  © 2023 Duoc UC. Todos los derechos reservados.</p>
+    
   </ion-toolbar>
 </ion-footer>

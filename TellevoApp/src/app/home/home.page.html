@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="medium">
+  <ion-toolbar style="background-color: #012E55; color: #FFFFFF;" color="#FFFFFF;">
     <ion-title>
       TeLlevoApp
     </ion-title>
@@ -15,17 +15,23 @@
 
   <div class="ion-padding" style="text-align: center; margin-top: 2cm;">
     <h1 style="font-weight: 500;">¡Bienvenido a TeLlevoApp!</h1>
-
+    
   </div>
   
-  <ion-button fill="outline" color="medium" class="ion-padding" expand="block" routerLink="/login">Login</ion-button> 
-  <ion-button fill="outline" color="medium" class="ion-padding" expand="block" routerLink="/register">Register</ion-button>
+  <!-- <ion-button color="#FBBD1E" class="ion-padding"  expand="block" routerLink="/login">Login</ion-button> -->
+  <!-- <ion-button  color="#FBBD1E" class="ion-padding" expand="block" routerLink="/register">Register</ion-button> -->
   
+  <ion-button expand="block" routerLink="/login"  
+  style="margin-top: 5mm; background: #FBBD1E;" class="" color="#FBBD1E">Login</ion-button> 
 
+  <ion-button expand="block" routerLink="/register"  
+  style="margin-top: 3mm; background:  #FBBD1E;" class="" color="#FBBD1E">Regirster</ion-button> 
 
 </ion-content>
-<ion-footer>
-  <ion-toolbar color="medium">
-    <ion-title>Footer</ion-title>
+<ion-footer style="background-color: #012E55;">
+  <ion-toolbar color="#012E55" style="text-align: center; background-color: #012E55; color: #FFFFFF;">
+    <p>TellevoApp</p>
+    <p>  © 2023 Duoc UC. Todos los derechos reservados.</p>
+    
   </ion-toolbar>
 </ion-footer>
