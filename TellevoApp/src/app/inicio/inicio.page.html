@@ -11,8 +11,8 @@
       </ion-toolbar>
     </ion-header>
     
-    <div style= "margin-top:1cm; margin-bottom:1.5cm; text-align: center; font-weight: 900;" class="ion-padding" >
-      <ion-label style="text-align: center;">
+    <div style= "margin-top:1cm; margin-bottom:1.5cm; text-align: center; font-weight: 500; font-size: x-large;" class="ion-padding" >
+      <ion-label style="text-align: center; padding-bottom: 10px;">
         ¡Bienvenido, {{(nombreUsuario$ | async)}} !
       </ion-label>
           <ion-button expand="block" routerLink="/home" 
@@ -25,12 +25,12 @@
     
 
     <div class="ion-padding" style="text-align: center; margin-top: 1cm;">
-      <h1 style="font-weight: 500;">Conductores reconocidos nuestra empresa</h1>
+      <h1 style="font-weight: 500;">Conductores reconocidos por nuestra empresa</h1>
     </div>
     <hr>
 
 
-    <ion-card *ngFor="let dummy of dummys?.users" style="margin-top: 10mm;">
+    <ion-card *ngFor="let dummy of dummys?.users" style="margin-top: 7mm;">
       <ion-card-header style="background: #012E55; color: #FFFFFF; margin-bottom:0;">
         <ion-card-title style="color: #FFFFFF;">Nombre: {{dummy.firstName}} {{dummy.lastName}} </ion-card-title>
         

@@ -33,9 +33,11 @@ const routes: Routes = [
     path: 'detalles',
     loadChildren: () => import('./detalles/detalles.module').then( m => m.DetallesPageModule),
     canActivate:[IngresadoGuard]
-  },  {
+  },
+  {
     path: 'solicitar',
-    loadChildren: () => import('./solicitar/solicitar.module').then( m => m.SolicitarPageModule)
+    loadChildren: () => import('./solicitar/solicitar.module').then( m => m.SolicitarPageModule),
+    canActivate:[IngresadoGuard]
   },
 
 ];
